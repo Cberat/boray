@@ -14,11 +14,11 @@ class UrunController extends Controller
 {
 
 
-   /* public function __construct()
+    public function __construct()
     {
         $categories = EmlakCategory::all();
         View::share("categories", $categories);
-    }*/
+    }
 
     public function index()
     {
@@ -26,14 +26,14 @@ class UrunController extends Controller
       return view("frontend.urun.index", compact("uruns"));
     }
 
-    /*public function category($category)
+    public function category($category)
     {
         $category = EmlakCategory::where("slug", $category)->first();
         $uruns = Emlak::where(["status" => 1, "category_id" => $category->id])->get();
         return view("frontend.urun.index", compact("uruns"));
-    }*/
+    }
 
-    public function details($category, $slug)
+    public function details($slug)
     {
         $urun = Emlak::where("slug", $slug)->first();
         return view("frontend.urun.single-urun", compact("urun"));

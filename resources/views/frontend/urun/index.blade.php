@@ -18,18 +18,19 @@
 
                     <!-- Product Cards-->
                     @foreach($uruns as $urun)
+                        <a  href="{{route("frontend.urun.details", ["category" => $urun->category->slug, "slug" => $urun->slug])}}">
                     <div class="product-card product-card--border-highlight">
                         <div class="product-card__img-container">
                             <div class="product-card__tag-container">
                                 <span class="product-card__tag">Öne Çıkan Proje</span>
                             </div>
-                            <a href="#">
+
                                 <img class="lazyload product-card__img" data-srcset="{{asset("uploads/".$urun->cover_image)}}"
                                      alt="{{$urun->title}}">
-                            </a>
+
                         </div>
                         <div class="product-card__wrapper">
-                            <h4 class="product-card__title"><a href="#">{{$urun->title}}</a></h4>
+                            <h4 class="product-card__title"><a href="{{route("frontend.urun.details", ["category" => $urun->category->slug, "slug" => $urun->slug])}}">{{$urun->title}}</a></h4>
                             <p class="product-card__paragraph">{{$urun->description}}</p>
                             <div class="product-card__info-container">
                                 <div class="product-card__info"><strong class="product-card__info-title">Şehir:
@@ -52,6 +53,7 @@
                             </div>
                         </div>
                     </div>
+                        </a>
                     @endforeach
                     <!-- Product Cards-->
 
