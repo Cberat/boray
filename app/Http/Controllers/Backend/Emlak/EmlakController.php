@@ -2,16 +2,14 @@
 
 namespace App\Http\Controllers\Backend\Emlak;
 
-use App\Http\Requests\Backend\Blog\CreateRequest;
 use App\Models\Emlak;
 use App\Models\EmlakCategory;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
-
-
 use App\Http\Controllers\Controller;
+
 
 class EmlakController extends Controller
 {
@@ -35,7 +33,7 @@ class EmlakController extends Controller
         $emlak = Emlak::where("slug", $slug)->first();
         $categories = EmlakCategory::all();
 
-        return view("backend.urun.newUrun", compact("emlak", "categories"));
+        return view("backend.urun.newUruns", compact("emlak", "categories"));
     }
 
     public function create(Request $request)
@@ -44,7 +42,7 @@ class EmlakController extends Controller
         $file = null;
 
         if ($request->file("coverImage") != null){
-            $file = Storage::disk("public")->putFile("uruns/",$request->file("coverImage"));
+            $file = Storage::disk("public")->putFile("/uruns",$request->file("coverImage"));
         }
 
         if ($file == false){
@@ -92,7 +90,7 @@ class EmlakController extends Controller
             "description" => $request->description,
             "tags" => $request->tags,
             "content" => $request->get("content"),
-            "category_id" => $request->EmlakCategory,
+            "category_id" => $request->urunCategory,
             "slug" => $newSlug,
             "cover_image" => $file,
         ]);

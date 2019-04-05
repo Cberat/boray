@@ -7,141 +7,30 @@
 
             <div class="main-layout__column-flex main-layout__flex-2 ">
 
-                <div class="mobile-slider">
-                    <p class="main-content__header">Öne Çıkan Emlaklar</p>
-                    <div class="autoplay-mobile">
-                        <div class="product-card product-card--border-highlight">
-                            <div class="product-card__img-container">
-                                <div class="product-card__tag-container">
-                                    <span class="product-card__tag">Öne Çıkan Proje</span>
-                                </div>
-                                <a href="#">
-                                    <img class="lazyload product-card__img" data-srcset="https://www.borayemlak.com/wp-content/uploads/2019/01/1-7-265x163.jpg"
-                                         alt="">
-                                </a>
-                            </div>
-                            <div class="product-card__wrapper">
-                                <h4 class="product-card__title"><a href="#">Karsiyaka</a></h4>
-                                <p class="product-card__paragraph">Önü kesilmez muhteşem dağ ve deniz manzaralı tatil
-                                    sitesi ve/veya olağan üstü bir Malikane olmaya müsait arazi.</p>
-                                <div class="product-card__info-container">
-                                    <div class="product-card__info"><strong class="product-card__info-title">Şehir:
-                                        </strong><span class="product-card__info-value">Lefkoşa</span></div>
-                                    <div class="product-card__info"><strong class="product-card__info-title">Dönüm:
-                                        </strong><span class="product-card__info-value">1</span></div>
-                                    <div class="product-card__info"><strong class="product-card__info-title">Evlek:
-                                        </strong><span class="product-card__info-value">1</span></div>
-                                    <div class="product-card__info"><strong class="product-card__info-title">Ayak2:
-                                        </strong><span class="product-card__info-value">-</span></div>
-                                    <div class="product-card__info"><strong class="product-card__info-title">Toplam
-                                            Büyüklük: </strong><span class="product-card__info-value">-</span></div>
-                                    <div class="product-card__info"><strong class="product-card__info-title">Ref No:
-                                        </strong><span class="product-card__info-value">HM101</span></div>
-                                </div>
-                                <div class="product-card__price-container">
-                                    <span class="product-card__price-current">&pound; 139,950</span>
-                                    <span class="product-card__price-before">&pound; 144,950</span>
-
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="mobile-slider">
-                    <p class="main-content__header">Öne Çıkan Emlaklar</p>
-                    <div class="autoplay-mobile">
-
-
-                        <div class="product-card product-card--border-highlight">
-                            <div class="product-card__img-container">
-                                <div class="product-card__tag-container">
-                                    <span class="product-card__tag">Fırsat Ürün</span>
-                                </div>
-                                <a href="#">
-                                    <img class="lazyload product-card__img" data-srcset="https://www.borayemlak.com/wp-content/uploads/2019/01/1-7-265x163.jpg"
-                                         alt="">
-                                </a>
-                            </div>
-
-                        </div>
-
-                        <div class="product-card product-card--border-highlight">
-                            <div class="product-card__img-container">
-                                <div class="product-card__tag-container">
-                                    <span class="product-card__tag">Fırsat Ürün</span>
-                                </div>
-                                <a href="#">
-                                    <img class="lazyload product-card__img" data-srcset="https://www.borayemlak.com/wp-content/uploads/2019/01/1-7-265x163.jpg"
-                                         alt="">
-                                </a>
-                            </div>
-                            <div class="product-card__wrapper">
-                                <h4 class="product-card__title"><a href="#">Karsiyaka</a></h4>
-                                <p class="product-card__paragraph">Önü kesilmez muhteşem dağ ve deniz manzaralı tatil
-                                    sitesi ve/veya olağan üstü bir Malikane olmaya müsait arazi.</p>
-                                <div class="product-card__info-container">
-                                    <div class="product-card__info"><strong class="product-card__info-title">Şehir:
-                                        </strong><span class="product-card__info-value">Lefkoşa</span></div>
-                                    <div class="product-card__info"><strong class="product-card__info-title">Dönüm:
-                                        </strong><span class="product-card__info-value">1</span></div>
-                                    <div class="product-card__info"><strong class="product-card__info-title">Evlek:
-                                        </strong><span class="product-card__info-value">1</span></div>
-                                    <div class="product-card__info"><strong class="product-card__info-title">Ayak2:
-                                        </strong><span class="product-card__info-value">-</span></div>
-                                    <div class="product-card__info"><strong class="product-card__info-title">Toplam
-                                            Büyüklük: </strong><span class="product-card__info-value">-</span></div>
-                                    <div class="product-card__info"><strong class="product-card__info-title">Ref No:
-                                        </strong><span class="product-card__info-value">HM101</span></div>
-                                </div>
-                                <div class="product-card__price-container">
-                                    <span class="product-card__price-current">&pound; 139,950</span>
-                                    <span class="product-card__price-before">&pound; 144,950</span>
-
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-
                @include("frontend.include.mobile_slider")
 
                 {{-- Urunler --}}
-                {{-- Urunler --}}
-                {{-- Urunler --}}
-                {{-- Urunler --}}
-                {{-- Urunler --}}
-                {{-- Urunler --}}
-                {{-- Urunler --}}
-                {{-- Urunler --}}
+
                 <div class="main-layout__hide">
                     <h2 class="main-layout__header">Portföy</h2>
                 </div>
                 <div class="main-layout__row-flex-space-evenly main-layout__hide">
 
                     <!-- Product Cards-->
-                    <!-- Product Cards-->
-                    <!-- Product Cards-->
-                    <!-- Product Cards-->
-                    <!-- Product Cards-->
-                    <!-- Product Cards-->
+                    @foreach($uruns as $urun)
                     <div class="product-card product-card--border-highlight">
                         <div class="product-card__img-container">
                             <div class="product-card__tag-container">
                                 <span class="product-card__tag">Öne Çıkan Proje</span>
                             </div>
                             <a href="#">
-                                <img class="lazyload product-card__img" data-srcset="https://www.borayemlak.com/wp-content/uploads/2019/01/1-7-265x163.jpg"
-                                     alt="">
+                                <img class="lazyload product-card__img" data-srcset="{{asset("uploads/".$urun->cover_image)}}"
+                                     alt="{{$urun->title}}">
                             </a>
                         </div>
                         <div class="product-card__wrapper">
-                            <h4 class="product-card__title"><a href="#">Karsiyaka</a></h4>
-                            <p class="product-card__paragraph">Önü kesilmez muhteşem dağ ve deniz manzaralı tatil
-                                sitesi ve/veya olağan üstü bir Malikane olmaya müsait arazi.</p>
+                            <h4 class="product-card__title"><a href="#">{{$urun->title}}</a></h4>
+                            <p class="product-card__paragraph">{{$urun->description}}</p>
                             <div class="product-card__info-container">
                                 <div class="product-card__info"><strong class="product-card__info-title">Şehir:
                                     </strong><span class="product-card__info-value">Lefkoşa</span></div>
@@ -163,27 +52,17 @@
                             </div>
                         </div>
                     </div>
+                    @endforeach
+                    <!-- Product Cards-->
 
-
-                    <!-- Product Cards-->
-                    <!-- Product Cards-->
-                    <!-- Product Cards-->
-                    <!-- Product Cards-->
-                    <!-- Product Cards-->
-                    <!-- Product Cards-->
                 </div>
                 {{-- End Urunler --}}
-                {{-- End Urunler --}}
-                {{-- End Urunler --}}
-                {{-- End Urunler --}}
-                {{-- End Urunler --}}
-                {{-- End Urunler --}}
+
 
 
                 <div class="main-layout__row-flex main-layout__hide">
                     <button class="btn btn--green btn--padding-large btn--white-font">Tümünü Göster</button>
                 </div>
-
 
                 <div class=" main-layout__hide">
                     <h2 class="main-layout__header">Fırsat Ürünler</h2>

@@ -45,7 +45,7 @@
                                         <td>{{$emlak->category->title}} </td>
                                         <td>
                                             <button class="btn btn-danger emlakDelete" data-id="{{$emlak->id}}">Sil</button>
-                                            <a href="{{route("backend.urun.updateShow", ["id" => $emlak->id])}}" class="btn btn-primary">Düzenle</a>
+                                            <a href="{{route("backend.urun.updateShow", ["slug" => $emlak->slug])}}" class="btn btn-primary">Düzenle</a>
                                         </td>
                                     </tr>
                                 @endforeach

@@ -40,11 +40,11 @@
 
                         <div class="sidebar__column-flex">
 
-                            @foreach($categories as $category)
-                                <a class="sidebar__btn-inactive sidebar--margin-bottom" href="{{route("frontend.blog.category", ["category" => $category->slug])}}" >
-                                   {{$category->title}}
+
+                                <a class="sidebar__btn-inactive sidebar--margin-bottom" href="" >
+
                                 </a>
-                            @endforeach
+
                         </div>
 
                     </div>
