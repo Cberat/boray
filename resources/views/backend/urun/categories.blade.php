@@ -5,7 +5,7 @@
         <section class="content-header">
             <h1>
                 Kategoriler
-                <small>Blog kategorileri</small>
+
             </h1>
         </section>
 

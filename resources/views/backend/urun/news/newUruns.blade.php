@@ -65,9 +65,21 @@
                                 <label for="page_id" class="col-sm-2 control-label">Sehirler</label>
                                 <div class="col-sm-10">
                                     <select class="form-control" id="blogCategory" name="sehirCategory">
-                                        <option value="" selected>Kategori seçiniz</option>
+                                        <option value="" selected>Şehir seçiniz</option>
                                         @foreach($sehirs as $sehir)
                                             <option value="{{$sehir->id}}" @if(isset($emlak) && $sehir->id == $emlak->sehir_id) selected @endif >{{$sehir->title}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="page_id" class="col-sm-2 control-label">Agentler</label>
+                                <div class="col-sm-10">
+                                    <select class="form-control" id="blogCategory" name="agentCategory">
+                                        <option value="" selected>Agent seçiniz</option>
+                                        @foreach($agents as $agent)
+                                            <option value="{{$agent->id}}" @if(isset($emlak) && $agent->id == $emlak->agent_id) selected @endif >{{$agent->title}}</option>
                                         @endforeach
                                     </select>
                                 </div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Backend\Emlak;
 
+use App\Models\Agent;
 use App\Models\Emlak;
 use App\Models\EmlakCategory;
 use App\Models\Sehir;
@@ -26,8 +27,9 @@ class EmlakController extends Controller
     {
         $categories = EmlakCategory::all();
         $sehirs = Sehir::all();
+        $agents = Agent::all();
 
-        return view("backend.urun.news.newUruns", compact("categories","sehirs"));
+        return view("backend.urun.news.newUruns", compact("categories","sehirs","agents"));
     }
 
     public function updateShow($slug)
@@ -35,8 +37,10 @@ class EmlakController extends Controller
         $emlak = Emlak::where("slug", $slug)->first();
         $categories = EmlakCategory::all();
         $sehirs = Sehir::all();
+        $agents = Agent::all();
 
-        return view("backend.urun.news.newUruns", compact("emlak", "categories","sehirs"));
+
+        return view("backend.urun.news.newUruns", compact("emlak", "categories","sehirs","agents"));
     }
 
     public function create(Request $request)
@@ -49,7 +53,7 @@ class EmlakController extends Controller
         }
 
         if ($file == false){
-            return ["status" => "error", "title" => "Hatalı", "message" => "Blog resmi kaydedilemedi"];
+            return ["status" => "error", "title" => "Hatalı", "message" => "urun resmi kaydedilemedi"];
         }
 
         $slug = str_slug($request->title.Carbon::now(),"-");
@@ -63,6 +67,7 @@ class EmlakController extends Controller
         $emlak->content = $request->get("content");
         $emlak->category_id = $request->urunCategory;
         $emlak->sehir_id = $request->sehirCategory;
+        $emlak->agent_id = $request->agentCategory;
         $emlak->slug = $slug;
         $emlak->cover_image = $file;
 
@@ -95,6 +100,7 @@ class EmlakController extends Controller
             "content" => $request->get("content"),
             "category_id" => $request->urunCategory,
             "sehir_id" => $request->sehirCategory,
+            "agent_id" => $request->agentCategory,
             "slug" => $newSlug,
             "cover_image" => $file,
         ]);

@@ -70,12 +70,17 @@ Route::group(["prefix"=>"admin", "as"=>"backend", "namespace" => "Backend"],/* "
             Route::post("/create", "SehirController@create")->name(".create");
             Route::post("/delete", "SehirController@delete")->name(".delete");
         });
+        Route::group(["prefix" => "agents", "as" => ".agent"], function (){
 
-       Route::group(["prefix" => "yorumlar", "as" => ".comments"], function (){
-           Route::get("/", "BlogCommentController@index")->name(".index");
-           Route::post("/confirm", "BlogCommentController@confirm")->name(".confirm");
-           Route::post("/delete", "BlogCommentController@delete")->name(".delete");
-       });
+            Route::get("/", "AgentController@index")->name(".index");
+            Route::get("/yeni-agent", "AgentController@createShow")->name(".createShow");
+            Route::get("/duzenle/{slug}", "AgentController@updateShow")->name(".updateShow");
+            Route::post("/delete", "AgentController@delete")->name(".delete");
+            Route::post("/update/{id}", "AgentController@update")->name(".update");
+            Route::post("/create", "AgentController@create")->name(".create");
+
+        });
+
 
     });
 

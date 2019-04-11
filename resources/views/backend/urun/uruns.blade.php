@@ -4,8 +4,8 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Bloglar
-                <small>Bloglar</small>
+                Urunler
+
             </h1>
         </section>
 
@@ -42,7 +42,7 @@
                                     <tr>
                                         <td>{{$emlak->id}}</td>
                                         <td>{{$emlak->title}} </td>
-                                        <td>{{"Agent"}} </td>
+                                        <td>{{$emlak->agent->title}} </td>
                                         <td>{{$emlak->category->title}} </td>
                                         <td>{{$emlak->sehir->title}} </td>
                                         <td>

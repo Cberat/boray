@@ -17,6 +17,7 @@ class CreateEmlaksTable extends Migration
             $table->increments('id');
             $table->integer("sehir_id");
             $table->integer("category_id");
+            $table->integer("agent_id");
             $table->string("cover_image")->nullable();
             $table->string("title");
             $table->string("keywords")->nullable();

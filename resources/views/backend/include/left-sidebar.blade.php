@@ -33,6 +33,7 @@
                     <li><a href="{{route("backend.urun.index")}}">Urunler</a></li>
                     <li><a href="{{route("backend.urun.category.index")}}">Kategoriler</a></li>
                     <li><a href="{{route("backend.urun.sehir.index")}}">Sehir</a></li>
+                    <li><a href="{{route("backend.urun.agent.index")}}">Agent</a></li>
                 </ul>
             </li>
            {{-- <li class="treeview">

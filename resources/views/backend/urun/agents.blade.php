@@ -4,7 +4,8 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Sehirler kategorileri
+                Agent
+
             </h1>
         </section>
 
@@ -20,7 +21,7 @@
                             <div class="box-tools">
                                 <div class="input-group input-group-sm" style="width: 150px;">
                                     <div class="input-group-btn">
-                                        <a href="{{route("backend.urun.sehir.createShow")}}" class="btn btn-primary" id="newSetting">Ekle</a>
+                                        <a href="{{route("backend.urun.agent.createShow")}}" class="btn btn-primary" id="newSetting">Ekle</a>
                                     </div>
                                 </div>
                             </div>
@@ -34,13 +35,13 @@
                                     <th>İşlemler</th>
                                 </tr>
 
-                                @foreach($sehirs as $sehir)
+                                @foreach($agents as $agent)
                                     <tr>
-                                        <td>{{$sehir->id}}</td>
-                                        <td>{{$sehir->title}} </td>
+                                        <td>{{$agent->id}}</td>
+                                        <td>{{$agent->title}} </td>
                                         <td>
-                                            <button class="btn btn-danger sehirDelete" data-id="{{$sehir->id}}">Sil</button>
-                                            <a href="{{route("backend.urun.sehir.updateShow", ["id" => $sehir->id])}}" class="btn btn-primary">Düzenle</a>
+                                            <button class="btn btn-danger agentDelete" data-id="{{$agent->id}}">Sil</button>
+                                            <a href="{{route("backend.urun.agent.updateShow", ["slug" => $agent->slug])}}" class="btn btn-primary">Düzenle</a>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -59,11 +60,11 @@
 
 @push("customJs")
     <script>
-        $(".sehirDelete").click(function () {
+        $(".agentDelete").click(function () {
             var button = $(this);
             $.ajax({
                 type : "post",
-                url : "{{route("backend.urun.sehir.delete")}}",
+                url : "{{route("backend.urun.agent.delete")}}",
                 data : {
                     _token : "{{csrf_token()}}",
                     id : button.data("id")

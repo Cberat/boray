@@ -18,7 +18,12 @@ class Emlak extends Model
        return $this->hasOne(Sehir::class,"id","sehir_id");
 
    }
+    public function agent()
+    {
 
+        return $this->hasOne(Agent::class,"id","agent_id");
+
+    }
 
 
 }

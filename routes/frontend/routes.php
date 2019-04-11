@@ -7,10 +7,8 @@
  */
 
 Route::group(["as"=>"frontend", "namespace" => "Frontend"], function () {
-    /*Route::get("/", "HomeController@index")->name(".index");*/
 
     Route::get("/test", "StaticController@test");
-
 
 
     Route::group(["as" => ".urun", "prefix" => "urun", "namespace"=>"Urun"], function() {
