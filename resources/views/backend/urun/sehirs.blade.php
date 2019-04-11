@@ -4,8 +4,8 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Bloglar
-                <small>Bloglar</small>
+                Kategoriler
+                <small>Blog kategorileri</small>
             </h1>
         </section>
 
@@ -21,7 +21,7 @@
                             <div class="box-tools">
                                 <div class="input-group input-group-sm" style="width: 150px;">
                                     <div class="input-group-btn">
-                                        <a href="{{route("backend.urun.createShow")}}" class="btn btn-primary" id="newSetting">Ekle</a>
+                                        <a href="{{route("backend.urun.sehir.createShow")}}" class="btn btn-primary" id="newSetting">Ekle</a>
                                     </div>
                                 </div>
                             </div>
@@ -32,22 +32,16 @@
                                 <tr id="settingTableHeader">
                                     <th>#</th>
                                     <th>Başlık</th>
-                                    <th>Yazar</th>
-                                    <th>Kategori</th>
-                                    <th>Sehir</th>
                                     <th>İşlemler</th>
                                 </tr>
 
-                                @foreach($emlaks as $emlak)
+                                @foreach($sehirs as $sehir)
                                     <tr>
-                                        <td>{{$emlak->id}}</td>
-                                        <td>{{$emlak->title}} </td>
-                                        <td>{{"Agent"}} </td>
-                                        <td>{{$emlak->category->title}} </td>
-                                        <td>{{$emlak->sehir->title}} </td>
+                                        <td>{{$sehir->id}}</td>
+                                        <td>{{$sehir->title}} </td>
                                         <td>
-                                            <button class="btn btn-danger emlakDelete" data-id="{{$emlak->id}}">Sil</button>
-                                            <a href="{{route("backend.urun.updateShow", ["slug" => $emlak->slug])}}" class="btn btn-primary">Düzenle</a>
+                                            <button class="btn btn-danger categoryDelete" data-id="{{$sehir->id}}">Sil</button>
+                                            <a href="{{route("backend.urun.sehir.updateShow", ["id" => $sehir->id])}}" class="btn btn-primary">Düzenle</a>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -66,11 +60,11 @@
 
 @push("customJs")
     <script>
-        $(".emlakDelete").click(function () {
+        $(".sehirDelete").click(function () {
             var button = $(this);
             $.ajax({
                 type : "post",
-                url : "{{route("backend.urun.delete")}}",
+                url : "{{route("backend.urun.sehir.delete")}}",
                 data : {
                     _token : "{{csrf_token()}}",
                     id : button.data("id")

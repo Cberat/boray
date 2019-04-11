@@ -47,6 +47,7 @@
                                     <input name="title" type="text" class="form-control" id="title" placeholder="Başlık" value="@if(isset($emlak)) {{$emlak->title}} @endif">
                                 </div>
                             </div>
+
                             <div class="form-group">
                                 <label for="page_id" class="col-sm-2 control-label">Kategori</label>
                                 <div class="col-sm-10">
@@ -58,6 +59,20 @@
                                     </select>
                                 </div>
                             </div>
+
+
+                            <div class="form-group">
+                                <label for="page_id" class="col-sm-2 control-label">Sehirler</label>
+                                <div class="col-sm-10">
+                                    <select class="form-control" id="blogCategory" name="sehirCategory">
+                                        <option value="" selected>Kategori seçiniz</option>
+                                        @foreach($sehirs as $sehir)
+                                            <option value="{{$sehir->id}}" @if(isset($emlak) && $sehir->id == $emlak->sehir_id) selected @endif >{{$sehir->title}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+
                             <div class="form-group">
                                 <label for="keywords" class="col-sm-2 control-label">Anahtar Kelimeler</label>
 

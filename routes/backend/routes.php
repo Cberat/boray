@@ -62,6 +62,15 @@ Route::group(["prefix"=>"admin", "as"=>"backend", "namespace" => "Backend"],/* "
            Route::post("/delete", "CategoryController@delete")->name(".delete");
        });
 
+        Route::group(["prefix" => "sehirs", "as" => ".sehir"], function (){
+            Route::get("/", "SehirController@index")->name(".index");
+            Route::get("/yeni-sehir", "SehirController@createShow")->name(".createShow");
+            Route::get("/duzenle/{id}", "SehirController@updateShow")->name(".updateShow");
+            Route::post("/update/{id}", "SehirController@update")->name(".update");
+            Route::post("/create", "SehirController@create")->name(".create");
+            Route::post("/delete", "SehirController@delete")->name(".delete");
+        });
+
        Route::group(["prefix" => "yorumlar", "as" => ".comments"], function (){
            Route::get("/", "BlogCommentController@index")->name(".index");
            Route::post("/confirm", "BlogCommentController@confirm")->name(".confirm");

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend\Emlak;
 
 use App\Models\Emlak;
 use App\Models\EmlakCategory;
+use App\Models\Sehir;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Carbon\Carbon;
@@ -24,16 +25,18 @@ class EmlakController extends Controller
     public function createShow()
     {
         $categories = EmlakCategory::all();
+        $sehirs = Sehir::all();
 
-        return view("backend.urun.newUruns", compact("categories"));
+        return view("backend.urun.news.newUruns", compact("categories","sehirs"));
     }
 
     public function updateShow($slug)
     {
         $emlak = Emlak::where("slug", $slug)->first();
         $categories = EmlakCategory::all();
+        $sehirs = Sehir::all();
 
-        return view("backend.urun.newUruns", compact("emlak", "categories"));
+        return view("backend.urun.news.newUruns", compact("emlak", "categories","sehirs"));
     }
 
     public function create(Request $request)
@@ -59,7 +62,7 @@ class EmlakController extends Controller
         $emlak->tags = $request->tags;
         $emlak->content = $request->get("content");
         $emlak->category_id = $request->urunCategory;
-
+        $emlak->sehir_id = $request->sehirCategory;
         $emlak->slug = $slug;
         $emlak->cover_image = $file;
 
@@ -91,16 +94,17 @@ class EmlakController extends Controller
             "tags" => $request->tags,
             "content" => $request->get("content"),
             "category_id" => $request->urunCategory,
+            "sehir_id" => $request->sehirCategory,
             "slug" => $newSlug,
             "cover_image" => $file,
         ]);
 
         if ($emlak){
 
-            return ["status" => "success", "title" => "başarılı", "message" => "Blog güncellendi."];
+            return ["status" => "success", "title" => "başarılı", "message" => "urun güncellendi."];
         }
 
-        return ["status" => "error", "title" => "Hatalı", "message" => "Blog güncellenemedi"];
+        return ["status" => "error", "title" => "Hatalı", "message" => "urun güncellenemedi"];
     }
 
     public function delete(Request $request)

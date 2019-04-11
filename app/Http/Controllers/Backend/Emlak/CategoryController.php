@@ -18,14 +18,14 @@ class CategoryController extends Controller
 
     public function createShow()
     {
-        return view("backend.urun.newCategory");
+        return view("backend.urun.news.newCategory");
     }
 
     public function updateShow($id)
     {
         $category = EmlakCategory::where("id", $id)->first();
 
-        return view("backend.urun.newCategory", compact("category"));
+        return view("backend.urun.news.newCategory", compact("category"));
     }
 
     public function create(Request $request)
