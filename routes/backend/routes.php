@@ -11,12 +11,12 @@ Route::post('admin/giris-yap', 'Auth\LoginController@login');
 Route::get('admin/cikis-yap', 'Auth\LoginController@logout')->name('backend.logout');
 
 Route::group(["prefix"=>"admin", "as"=>"backend", "namespace" => "Backend"],/* "middleware" => "admin"],*/ function (){
-    Route::get("/", "DashboardController@index")->name(".dashboard");
+
     Route::group(["prefix"=>"settings", "as"=>".settings", "namespace" => "Settings"], function (){
-        Route::get("/", "SettingsController@show")->name(".show");
-        Route::post("/update", "SettingsController@update")->name(".update");
-        Route::post("/create", "SettingsController@create")->name(".create");
-        Route::post("/delete", "SettingsController@delete")->name(".delete");
+        Route::get("/", "SettingController@show")->name(".show");
+        Route::post("/update", "SettingController@update")->name(".update");
+        Route::post("/create", "SettingController@create")->name(".create");
+        Route::post("/delete", "SettingController@delete")->name(".delete");
 
     });
 
@@ -45,7 +45,7 @@ Route::group(["prefix"=>"admin", "as"=>"backend", "namespace" => "Backend"],/* "
         Route::post("/delete", "MenusController@delete")->name(".delete");
     });
 
-    Route::group(["prefix" => "urun", "as" => ".urun", "namespace" => "Emlak"], function (){
+    Route::group([/*"prefix" => "urun",*/ "as" => ".urun", "namespace" => "Emlak"], function (){
        Route::get("/", "EmlakController@index")->name(".index");
        Route::get("/yeni-urun", "EmlakController@createShow")->name(".createShow");
        Route::get("/duzenle/{slug}", "EmlakController@updateShow")->name(".updateShow");

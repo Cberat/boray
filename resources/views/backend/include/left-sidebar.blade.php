@@ -22,7 +22,7 @@
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">HEADER</li>
             <!-- Optionally, you can add icons to the links -->
-            <li><a href="{{route("backend.dashboard")}}"><i class="fa fa-link"></i> <span>Dashboard</span></a></li>
+
             <li class="treeview">
                 <a href="#"><i class="fa fa-link"></i> <span>Urun</span>
                     <span class="pull-right-container">

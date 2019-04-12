@@ -25,7 +25,7 @@ class CreateEmlaksTable extends Migration
             $table->text("content");
             $table->string("slug");
             $table->string("tags")->nullable();
-            $table->enum("status",[1,0]);
+            $table->boolean("satilik_kiralik");
             $table->timestamps();
         });
     }
