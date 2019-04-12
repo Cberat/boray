@@ -24,8 +24,7 @@ class CreateEmlaksTable extends Migration
             $table->string("description")->nullable();
             $table->text("content");
             $table->string("slug");
-            $table->string("tags")->nullable();
-            $table->boolean("satilik_kiralik");
+            $table->text("genel_oz")->nullable();
             $table->timestamps();
         });
     }

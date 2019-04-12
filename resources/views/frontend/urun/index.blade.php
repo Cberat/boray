@@ -33,18 +33,7 @@
                             <h4 class="product-card__title"><a href="{{route("frontend.urun.details", ["category" => $urun->category->slug, "slug" => $urun->slug])}}">{{$urun->title}}</a></h4>
                             <p class="product-card__paragraph">{{$urun->description}}</p>
                             <div class="product-card__info-container">
-                                <div class="product-card__info"><strong class="product-card__info-title">Şehir:
-                                    </strong><span class="product-card__info-value">Lefkoşa</span></div>
-                                <div class="product-card__info"><strong class="product-card__info-title">Dönüm:
-                                    </strong><span class="product-card__info-value">1</span></div>
-                                <div class="product-card__info"><strong class="product-card__info-title">Evlek:
-                                    </strong><span class="product-card__info-value">1</span></div>
-                                <div class="product-card__info"><strong class="product-card__info-title">Ayak2:
-                                    </strong><span class="product-card__info-value">-</span></div>
-                                <div class="product-card__info"><strong class="product-card__info-title">Toplam
-                                        Büyüklük: </strong><span class="product-card__info-value">-</span></div>
-                                <div class="product-card__info"><strong class="product-card__info-title">Ref No:
-                                    </strong><span class="product-card__info-value">HM101</span></div>
+                                <div class="product-card__info"><p>{!!$urun->content!!}</p></div>
                             </div>
                             <div class="product-card__price-container">
                                 <span class="product-card__price-current">&pound; 139,950</span>

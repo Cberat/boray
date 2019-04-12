@@ -21,6 +21,23 @@ scratch. This page gets rid of all links and provides the needed markup only.
           page. However, you can choose any other skin. Make sure you
           apply the skin class to the body tag so the changes take effect. -->
     <link rel="stylesheet" href="{{asset("assets/backend/dist/css/skins/skin-blue.min.css")}}">
+    <!-- daterange picker -->
+    <link rel="stylesheet" href="{{asset("assets/backend/bower_components/bootstrap-daterangepicker/daterangepicker.css")}}">
+    <!-- bootstrap datepicker -->
+    <link rel="stylesheet" href="{{asset("assets/backend/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css")}}">
+    <!-- iCheck for checkboxes and radio inputs -->
+    <link rel="stylesheet" href="{{asset("assets/backend/plugins/iCheck/all.css")}}">
+    <!-- Bootstrap Color Picker -->
+    <link rel="stylesheet" href="{{asset("assets/backend/bower_components/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css")}}">
+    <!-- Bootstrap time Picker -->
+    <link rel="stylesheet" href="{{asset("assets/backend/plugins/timepicker/bootstrap-timepicker.min.css")}}">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="{{asset("assets/backendbower_components/select2/dist/css/select2.min.css/")}}">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="{{asset("assets/backend/dist/css/AdminLTE.min.css")}}">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="{{asset("assets/backend/dist/css/skins/_all-skins.min.css")}}">
 
     @stack("customCss")
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->

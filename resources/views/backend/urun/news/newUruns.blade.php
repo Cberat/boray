@@ -109,13 +109,16 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="description" class="col-sm-2 control-label">Etiketler</label>
+                                <label for="genel_oz" class="col-sm-2 control-label">Genel Özellikler</label>
 
                                 <div class="col-sm-10">
-                                    <input name="tags" type="text" class="form-control" id="tags" placeholder="Etiketler" value="@if(isset($emlak)) {{$emlak->tags}} @endif">
+                                    <textarea name="genel_oz" class="form-control textarea" id="genel_oz" placeholder="İçerik girin">
+                                        @if(isset($emlak)) {{$emlak->genel_oz}} @endif
+                                    </textarea>
                                 </div>
                             </div>
                         </div>
+
                         <!-- /.box-body -->
                         <div class="box-footer">
                             <button type="button" class="btn btn-default">İptal</button>

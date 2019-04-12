@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="{{$settings["keywords"]}}">
     <link rel="stylesheet" type="text/css" media="screen" href="{{asset("assets/frontend/temp/styles/styles.css")}}" />
+    <script src="https://cdn.ckeditor.com/4.11.4/standard-all/ckeditor.js"></script>
     <link rel="shortcut icon" href="https://www.borayemlak.com/wp-content/themes/boray_theme/img/favicon.ico">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
           crossorigin="anonymous">

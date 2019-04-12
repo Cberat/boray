@@ -63,7 +63,7 @@ class EmlakController extends Controller
         $emlak->title = $request->title;
         $emlak->keywords = $request->keywords;
         $emlak->description = $request->description;
-        $emlak->tags = $request->tags;
+        $emlak->genel_oz = $request->genel_oz;
         $emlak->content = $request->get("content");
         $emlak->category_id = $request->urunCategory;
         $emlak->sehir_id = $request->sehirCategory;
@@ -96,7 +96,7 @@ class EmlakController extends Controller
             "title" => $request->title,
             "keywords" => $request->keywords,
             "description" => $request->description,
-            "tags" => $request->tags,
+            "genel_oz" => $request->genel_oz,
             "content" => $request->get("content"),
             "category_id" => $request->urunCategory,
             "sehir_id" => $request->sehirCategory,
