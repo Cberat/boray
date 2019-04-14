@@ -15,7 +15,9 @@ Route::group(["as"=>"frontend", "namespace" => "Frontend"], function () {
        Route::get("/", "UrunController@index")->name(".index");
        Route::get("/{category}", "UrunController@category")->name(".category");
        Route::get("/{category}/{slug}", "UrunController@details")->name(".details");
+
     });
+
 
     /*Route::group(["as" => ".portfolio", "prefix" => "portfolyo"], function (){
        Route::get("/", "PortfolioController@index")->name(".index");

@@ -46,7 +46,7 @@
                     <li><a href="{{route("backend.static.show")}}">Sayfalar</a></li>
                     <li><a href="{{route("backend.static.module.show")}}">Moduller</a></li>
                 </ul>
-            </li>
+            </li>>--}}
             <li class="treeview">
                 <a href="#"><i class="fa fa-link"></i> <span>Genel Ayarlar</span>
                     <span class="pull-right-container">
@@ -57,7 +57,7 @@
                     <li><a href="{{route("backend.settings.show")}}">Ayarlar</a></li>
                     <li><a href="{{route("backend.menus.index")}}">Menüler</a></li>
                 </ul>
-            </li>--}}
+            </li>
         </ul>
         <!-- /.sidebar-menu -->
     </section>

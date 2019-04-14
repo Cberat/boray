@@ -7,7 +7,7 @@
 
                     <div class="slider-hero__row-flex">
                         <div class="slider-hero__row-flex-start">
-                            <h2 class="slider-hero__header-small-gray">Kuru Dere</h2>
+                            <h2 class="slider-hero__header-small-gray">{{$urun->title}}</h2>
                         </div>
                         <div class="slider-hero__row-flex-end">
                             <div class=" slider-hero__row-flex-end"> <span class="slider-hero__badge">KR106</span></div>

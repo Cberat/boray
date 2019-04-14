@@ -33,7 +33,7 @@ class UrunController extends Controller
         return view("frontend.urun.index", compact("uruns"));
     }
 
-    public function details($slug)
+    public function details($category,$slug)
     {
         $urun = Emlak::where("slug", $slug)->first();
         return view("frontend.urun.single-urun", compact("urun"));
