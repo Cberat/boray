@@ -27,20 +27,13 @@
                         {{csrf_field()}}
                         <div class="box-body">
                             <div class="form-group">
-                                <label for="title" class="col-sm-2 control-label">Başlık</label>
+                                <label for="title" class="col-sm-2 control-label">Category:</label>
 
                                 <div class="col-sm-10">
-                                    <input name="title" type="text" class="form-control" id="title" placeholder="Başlık" value="@if(isset($category)) {{$category->title}} @endif">
+                                    <input name="title" type="text" class="form-control" id="title" placeholder="Category" value="@if(isset($category)) {{$category->title}} @endif">
                                 </div>
                             </div>
 
-                            <div class="form-group">
-                                <label for="keywords" class="col-sm-2 control-label">Anahtar Kelimeler</label>
-
-                                <div class="col-sm-10">
-                                    <input name="keywords" type="text" class="form-control" id="keywords" placeholder="Anahtar Kelimeler" value="@if(isset($category)) {{$category->keywords}} @endif">
-                                </div>
-                            </div>
                             <div class="form-group">
                                 <label for="description" class="col-sm-2 control-label">Açıklama</label>
 

@@ -34,24 +34,30 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="title" class="col-sm-2 control-label">Kapak Fotoğrafı</label>
+                                <label for="title" class="col-sm-2 control-label">Kapak Fotoğrafı:</label>
 
                                 <div class="col-sm-10">
                                     <input name="agentImage" type="file" class="form-control" id="agentImage">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="title" class="col-sm-2 control-label">Başlık</label>
+                                <label for="title" class="col-sm-2 control-label">İsim Soyisim:</label>
 
                                 <div class="col-sm-10">
                                     <input name="title" type="text" class="form-control" id="title" placeholder="Başlık" value="@if(isset($agent)) {{$agent->title}} @endif">
                                 </div>
                             </div>
 
+                            <div class="form-group">
+                                <label for="email" class="col-sm-2 control-label">Telefon Numarası:</label>
 
+                                <div class="col-sm-10">
+                                    <input name="tel_no" type="text" class="form-control" id="tel_no" placeholder="Email.." value="@if(isset($agent)) {{$agent->tel_no}} @endif">
+                                </div>
+                            </div>
 
                             <div class="form-group">
-                                <label for="email" class="col-sm-2 control-label">Anahtar Kelimeler</label>
+                                <label for="email" class="col-sm-2 control-label">E-mail:</label>
 
                                 <div class="col-sm-10">
                                     <input name="email" type="text" class="form-control" id="email" placeholder="Email.." value="@if(isset($agent)) {{$agent->email}} @endif">
@@ -59,7 +65,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="description" class="col-sm-2 control-label">İçerik</label>
+                                <label for="description" class="col-sm-2 control-label">Kişi Açıklaması:</label>
 
                                 <div class="col-sm-10">
                                     <textarea name="description" class="form-control textarea" id="description" placeholder="Açıklama girin">

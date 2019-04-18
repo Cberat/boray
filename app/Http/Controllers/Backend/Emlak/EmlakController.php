@@ -25,6 +25,7 @@ class EmlakController extends Controller
 
     public function createShow()
     {
+       
         $categories = EmlakCategory::all();
         $sehirs = Sehir::all();
         $agents = Agent::all();
@@ -38,6 +39,7 @@ class EmlakController extends Controller
         $categories = EmlakCategory::all();
         $sehirs = Sehir::all();
         $agents = Agent::all();
+       
 
 
         return view("backend.urun.news.newUruns", compact("emlak", "categories","sehirs","agents"));
@@ -61,10 +63,10 @@ class EmlakController extends Controller
         $emlak = new Emlak();
 
         $emlak->title = $request->title;
-        $emlak->keywords = $request->keywords;
+        $emlak->oz_title = $request->oz_title;
         $emlak->description = $request->description;
-        $emlak->genel_oz = $request->genel_oz;
         $emlak->content = $request->get("content");
+        $emlak->genel_oz = $request->get("genel_oz");
         $emlak->category_id = $request->urunCategory;
         $emlak->sehir_id = $request->sehirCategory;
         $emlak->agent_id = $request->agentCategory;
@@ -94,14 +96,14 @@ class EmlakController extends Controller
 
         $emlak = Emlak::where("slug", $slug)->update([
             "title" => $request->title,
-            "keywords" => $request->keywords,
+            "oz_title" => $request->oz_title,
             "description" => $request->description,
-            "genel_oz" => $request->genel_oz,
             "content" => $request->get("content"),
+            "genel_oz" => $request->get("genel_oz"),
             "category_id" => $request->urunCategory,
             "sehir_id" => $request->sehirCategory,
             "agent_id" => $request->agentCategory,
-            "slug" => $newSlug,
+             "slug" => $newSlug,
             "cover_image" => $file,
         ]);
 

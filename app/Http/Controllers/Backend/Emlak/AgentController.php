@@ -48,6 +48,7 @@ class AgentController extends Controller
 
         $agent->title = $request->title;
         $agent->email = $request->email;
+        $agent->tel_no = $request->tel_no;
         $agent->description = $request->description;
         $agent->slug = $slug;
         $agent->agent_image = $file;
@@ -76,6 +77,7 @@ class AgentController extends Controller
         $agent = Agent::where("slug", $slug)->update([
             "title" => $request->title,
             "email" => $request->email,
+            "tel_no" => $request->tel_no,
             "description" => $request->description,
             "slug" => $newSlug,
             "agent_image" => $file,

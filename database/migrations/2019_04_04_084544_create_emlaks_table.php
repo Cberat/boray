@@ -18,13 +18,14 @@ class CreateEmlaksTable extends Migration
             $table->integer("sehir_id");
             $table->integer("category_id");
             $table->integer("agent_id");
+           /* $table->integer("div_id");*/
             $table->string("cover_image")->nullable();
             $table->string("title");
-            $table->string("keywords")->nullable();
             $table->string("description")->nullable();
             $table->text("content");
+            $table->text("oz_title");
+            $table->text("genel_oz");
             $table->string("slug");
-            $table->text("genel_oz")->nullable();
             $table->timestamps();
         });
     }

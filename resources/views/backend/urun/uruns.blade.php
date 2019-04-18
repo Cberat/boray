@@ -32,7 +32,7 @@
                                 <tr id="settingTableHeader">
                                     <th>#</th>
                                     <th>Başlık</th>
-                                    <th>Yazar</th>
+                                    <th>Agent</th>
                                     <th>Kategori</th>
                                     <th>Sehir</th>
                                     <th>İşlemler</th>

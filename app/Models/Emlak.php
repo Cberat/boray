@@ -24,6 +24,11 @@ class Emlak extends Model
         return $this->hasOne(Agent::class,"id","agent_id");
 
     }
+   /* public function div()
+    {
 
+        return $this->hasOne(MultiDiv::class,"id","div_id");
+
+    }*/
 
 }

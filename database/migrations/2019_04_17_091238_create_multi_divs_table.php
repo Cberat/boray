@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAgentsTable extends Migration
+class CreateMultiDivsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,10 @@ class CreateAgentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('agents', function (Blueprint $table) {
+        Schema::create('multi_divs', function (Blueprint $table) {
             $table->increments('id');
-            $table->string("title");
-            $table->text("description")->nullable();
-            $table->string("agent_image")->nullable();
-            $table->text("tel_no");
-            $table->string("slug");
-            $table->string("email");
+            $table->text('title');
+            $table->text("description");
             $table->timestamps();
         });
     }
@@ -32,6 +28,6 @@ class CreateAgentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('agents');
+        Schema::dropIfExists('multi_divs');
     }
 }

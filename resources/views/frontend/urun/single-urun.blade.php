@@ -18,7 +18,8 @@
 
                     <div class="slider-hero__column-flex-new slider-hero__margin--top-bottom">
                         <div class="slider-for">
-                            <img src="https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" alt="">
+                        <img class="lazyload product-card__img" data-srcset="{{asset("uploads/".$urun->cover_image)}}"
+                                     alt="{{$urun->title}}">
 
 
 
@@ -30,7 +31,8 @@
 
 
 
-                            <img class="slider-hero__border" src="https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260" alt="">
+                        <img class="lazyload product-card__img" data-srcset="{{asset("uploads/".$urun->cover_image)}}"
+                                     alt="{{$urun->title}}">
                         </div>
 
                     </div>
@@ -68,91 +70,19 @@
 
                     <div class="product-panel__wrapper">
                         <div class="product-panel__flex-row-header">
-                            <h2 class="product-panel__header">Büyüklük</h2>
+                            <h2 class="product-panel__header">{{$urun->oz_title}}</h2>
                         </div>
                     </div>
 
                     <div class="product-panel__flex-column product-panel--padding">
                         <ul class="list--style-reset">
-                            <li class="product-panel__list-item"><strong class="product-panel__list-item-font">Donum: </strong><span class="product-panel__list-item-font">83</span></li>
-                            <li class="product-panel__list-item"><strong class="product-panel__list-item-font">Evlek: </strong><span class="product-panel__list-item-font">1</span></li>
-                            <li class="product-panel__list-item"><strong class="product-panel__list-item-font">Ay2: </strong><span class="product-panel__list-item-font">1100</span></li>
-                            <li class="product-panel__list-item"><strong class="product-panel__list-item-font">Toplam
-                                    Buyukluk(m<sup>2</sup>): </strong><span class="product-panel__list-item-font">115,110.87m<sup>2</sup></span></li>
+                            <li class="product-panel__list-item"><strong class="product-panel__list-item-font">{!!$urun->content!!} </strong><span class="product-panel__list-item-font"></span></li>
+                          
                         </ul>
                     </div>
                 </div>
 
-                <div class="product-panel">
-
-                    <div class="product-panel__wrapper">
-                        <div class="product-panel__flex-row-header">
-                            <h2 class="product-panel__header">Mesafeler</h2>
-                        </div>
-                    </div>
-
-                    <div class="product-panel__flex-column product-panel--padding">
-                        <ul class="list--style-reset">
-
-
-                            <li class="product-panel__list-item"> <span class="product-panel__list-item-font">Ercan Havalimanina sadece 10 dakika mesafededir</span> </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="product-panel">
-
-                    <div class="product-panel__wrapper">
-                        <div class="product-panel__flex-row-header">
-                            <h2 class="product-panel__header">İmar Durumu</h2>
-                        </div>
-                    </div>
-
-                    <div class="product-panel__flex-column product-panel--padding">
-                        <ul class="list--style-reset">
-
-
-
-                            <li class="product-panel__list-item"><strong class="product-panel__list-item-font">Toplam Insaat
-                                    Izin orani: </strong> <span class="product-panel__list-item-font">%220</span></li>
-
-                        </ul>
-                    </div>
-                </div>
-
-
-                <div class="product-panel">
-
-                    <div class="product-panel__wrapper">
-                        <div class="product-panel__flex-row-header">
-                            <h2 class="product-panel__header">Mevki</h2>
-                        </div>
-                    </div>
-
-                    <div class="product-panel__flex-column product-panel--padding">
-                        <ul class="list--style-reset">
-
-
-
-                            <li class="product-panel__list-item"><strong class="product-panel__list-item-font">Kaza: </strong>
-                                <span class="product-panel__list-item-font">Magusa</span></li>
-                        </ul>
-                    </div>
-                </div>
-
-
-                <div class="product-panel">
-
-                    <div class="product-panel__wrapper">
-                        <div class="product-panel__flex-row-header">
-                            <h2 class="product-panel__header">Konum</h2>
-                        </div>
-                    </div>
-
-                    <div class="product-panel__flex-column product-panel--padding-small">
-                        <iframe class="product-panel__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13042.745185525613!2d33.354214848854916!3d35.18937056997817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14de17338e8f7a91%3A0x7c09dc1ede0df051!2sMerit+Lefko%C5%9Fa+Hotel+Casino+%26+Spa!5e0!3m2!1str!2s!4v1549960555645" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-                    </div>
-                </div>
+                
 
                 <div>
                     <p><strong>Eklenme Tarihi: </strong> <span>21 Ocak 2019</span></p>
