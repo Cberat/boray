@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Middleware;
-use App\Models\Menu;
+
 use App\Models\Setting;
 use Illuminate\Support\Facades\View;
 
@@ -31,10 +31,14 @@ class Share
       
 
         $data["settings"] = $settingArr;
+
+
       
         View::share($data);
 
         return $next($request);
+
+        
     
     }
 }

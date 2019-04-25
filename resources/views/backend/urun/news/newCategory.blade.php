@@ -23,7 +23,7 @@
                     </div>
                     <!-- /.box-header -->
                     <!-- form start -->
-                    <form class="form-horizontal">
+                    <form class="form-horizontal" id="blogForm">
                         {{csrf_field()}}
                         <div class="box-body">
                             <div class="form-group">
@@ -64,6 +64,23 @@
             var url = "{{route("backend.urun.category.create")}}";
             @endif
 
+            var form = new FormData($("#blogForm")[0]);
+
+            $(".has-error").removeClass("has-error");
+            $(".label-danger").remove();
+
+            swal({
+                title: 'Yükleniyor...',
+                html:
+                '<i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>' +
+                ' <span class="sr-only">Loading...</span>',
+                showCloseButton: false,
+                showCancelButton: false,
+                showConfirmButton: false,
+                allowOutsideClick: false
+            });
+
+
             $.ajax({
                 type : "post",
                 url  : url,
@@ -75,14 +92,27 @@
                 },
 
                 success: function (response) {
+                    swal.close();
 
-                    console.log(response);
+                    swal({
+                        type: response.status,
+                        title: response.title,
+                        text: response.message
+                    }).then(function () {
+                        $(location).attr("href", "{{route("backend.urun.category.index")}}")
+                    });
 
                 },
 
                 error: function (response) {
+                    swal.close();
 
-                    console.log(response);
+                    $.each(response.responseJSON.errors, function (k, v) {
+                        $.each(v, function (kk, vv) {
+                            $("[name='" + k + "']").parent().addClass("has-error");
+                            $("[name='" + k + "']").parent().append(" <span class=\"label label-danger\">" + vv + "</span>");
+                        })
+                    });
                 }
 
             });

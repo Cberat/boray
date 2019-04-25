@@ -63,7 +63,7 @@ class EmlakController extends Controller
         $emlak = new Emlak();
 
         $emlak->title = $request->title;
-        $emlak->oz_title = $request->oz_title;
+        $emlak->oz_title = $request->get("oz_title");
         $emlak->description = $request->description;
         $emlak->content = $request->get("content");
         $emlak->genel_oz = $request->get("genel_oz");
@@ -100,10 +100,11 @@ class EmlakController extends Controller
             "description" => $request->description,
             "content" => $request->get("content"),
             "genel_oz" => $request->get("genel_oz"),
+            "oz_title" => $request->get("oz_title"),
             "category_id" => $request->urunCategory,
             "sehir_id" => $request->sehirCategory,
             "agent_id" => $request->agentCategory,
-             "slug" => $newSlug,
+            "slug" => $newSlug,
             "cover_image" => $file,
         ]);
 

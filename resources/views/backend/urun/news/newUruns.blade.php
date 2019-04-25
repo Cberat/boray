@@ -115,8 +115,11 @@
                                     </textarea>
                                 </div>
                             </div>
+                            
+
                              <div class="form-group">
-                            <input type="text" name="oz_title" size="4" class="col-sm-2 control-label"><br>
+                           
+                            <input type="text" name="oz_title" id="oz_title" size="4" class="col-sm-2 control-label"><br>
                            
                                 <div class="col-sm-10">
                                     <textarea name="genel_oz" class="form-control textarea" id="genel_oz" placeholder="İç Açıklama">
@@ -146,8 +149,7 @@
     <script>
         
         
-        
-        
+  
         $(function () {
             $('.textarea').wysihtml5();
             $.ajaxSetup({
